@@ -1,0 +1,511 @@
+<html>
+<head>
+    <title>ARIKU: HOME</title>
+    <link rel="icon" type="image/x-icon" href="/assets/Images/ARIKULogo.png">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="src/components/main.js"></script>
+    <script src="/src/components/prelineThings.min.js"></script>
+    <link rel="stylesheet" href="src/components/output.css">
+</head>
+
+<body class="bg-white dark:bg-slate-900 font-varela">
+    <header
+        class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-base py-4 dark:bg-slate-800 sticky top-0">
+        <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
+            <div class="flex items-center justify-between">
+                <a class="inline-flex items-center gap-x-2 text-xl font-semibold dark:text-white" href="https://blyatifulworld.github.io">
+                    <div class="bg-white rounded-md">
+                        <img class="w-12 h-auto" src="/assets/Images/ARIKULogo.png" alt="Logo">
+                    </div>
+                    ARIKU
+                </a>
+                <div class="sm:hidden">
+                    <button type="button"
+                        class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+                        data-hs-collapse="#navbar-image-and-text-2" aria-controls="navbar-image-and-text-2"
+                        aria-label="Toggle navigation">
+                        <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                        <svg class="hs-collapse-open:block hidden w-4 h-4" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="navbar-image-and-text-2"
+                class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
+                <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
+                    <a class="font-medium text-gray-800 hover:text-gray-500 dark:text-white dark:hover:text-gray-400"
+                        href="https://blyatifulworld.github.io">Home</a>
+                    <div class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none]">
+                        <button id="hs-mega-menu-basic-dr" type="button"
+                            class="flex items-center w-full text-gray-800 hover:text-gray-500 dark:text-white dark:hover:text-gray-400">
+                            Get Started
+                            <svg class="ml-2 w-2.5 h-2.5 text-gray-800 dark:text-white" width="16" height="16"
+                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                            </svg>
+                        </button>
+                        <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:left-0 before:w-full before:h-5 hidden"
+                            style="">
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400"
+                                href="src/pages/mindartest.html">
+                                Scanner
+                            </a>
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400"
+                                href="src/pages/infoCentre/mainInfo.html">
+                                InfoCentre
+                            </a>
+                        </div>
+                    </div>
+                    <a class="hs-dark-mode-active:hidden block hs-dark-mode group flex items-center text-gray-800 hover:text-blue-600 font-medium dark:text-white dark:hover:text-gray-400"
+                        href="#!" data-hs-theme-click-value="dark">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                        </svg>
+                    </a>
+                    <a class="hs-dark-mode-active:block hidden hs-dark-mode group flex items-center text-gray-800 hover:text-blue-600 font-medium dark:text-white dark:hover:text-gray-400"
+                        href="#!" data-hs-theme-click-value="light">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Body Section -->
+    <div class="font-medium text-gray-800 dark:text-white bg-gradient-to-b from-green-900/[.20] via-transparent">
+
+        <!-- The Top One -->
+        <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8 mb-6">
+            <div class="flex justify-center">
+                <a class="group inline-block bg-white/30 hover:bg-white/[.1] dark:bg-white/[.05] dark:hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md dark:text-white"
+                    href="/src/pages/infoCentre/mainInfo.html">
+                    <p class="mr-2 inline-block text-sm">
+                        InfoCentre Is Live.
+                    </p>
+                    <span
+                        class="group-hover:bg-white/[.1] py-2 px-3 inline-flex justify-center items-center gap-x-2 rounded-full bg-white/[.075] font-semibold text-sm">
+                        <svg class="w-2.5 h-2.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="max-w-3xl text-center mx-auto">
+                <h1 class="block font-medium text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+                    Augmented Reality บนเว็บเบราเซอร์ของคุณ
+                </h1>
+            </div>
+            <div class="max-w-3xl text-center mx-auto">
+                <p class="text-lg">เรียนรู้เกี่ยวกับคณะศิลปศาสตร์และวิทยาศาสตร์ มหาวิทยาลัยเกษตรศาสตร์
+                    วิทยาเขตกำแพงแสนได้ง่าย ๆ</p>
+            </div>
+            <div class="text-center">
+                <a class="transition ease-in-out delay-100 bg-blue-500 hover:-translate-y-1 hover:scale-110 inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-300 to-green-700 shadow-lg shadow-transparent hover:shadow-green-500/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6 dark:focus:ring-offset-gray-800"
+                    href="#getStart">
+                    เริ่มใช้งาน
+                    <svg class="w-2.5 h-2.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- The Second One -->
+        <!-- MindAR Section -->
+        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto mb-6">
+            <div class="md:grid md:grid-cols-2 md:items-center md:gap-4 xl:gap-8">
+                <div class="flex sm:justify-center md:justify-end moveToLeft">
+                    <img class="rounded-xl w-10/12 object-cover object-center md:object-right" src="assets/Images/mindarlogo.png"
+                        alt="MindAR.js logo">
+                </div>
+                <div class="mt-5 sm:mt-10 lg:mt-0">
+                    <div class="space-y-6 sm:space-y-8">
+                        <div class="space-y-2 md:space-y-4">
+                            <h2 class="font-bold text-3xl lg:text-4xl text-gray-800 dark:text-gray-200">
+                                สร้างขึ้นเพื่อความสะดวกในการใช้งาน
+                            </h2>
+                            <p class="text-gray-500 dark:text-gray-300">
+                                เทคโนโลยี MindAR สร้างขึ้นเพื่อการใช้งาน Augmented Reality บนเว็บเบราเซอร์ที่ใคร ๆ
+                                ก็สามารถใช้งานได้ไม่ว่าจะเป็นบนโทรศัพท์มือถือ แลปท๊อป หรือแม้คอมพิวเตอร์ตั้งโต๊ะ
+                            </p>
+                        </div>
+                        <ul role="list" class="space-y-2 sm:space-y-4">
+                            <li class="flex space-x-3">
+                                <svg class="flex-shrink-0 h-6 w-6 text-blue-600 dark:text-blue-500" width="16"
+                                    height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.1965 7.85999C15.1965 3.71785 11.8387 0.359985 7.69653 0.359985C3.5544 0.359985 0.196533 3.71785 0.196533 7.85999C0.196533 12.0021 3.5544 15.36 7.69653 15.36C11.8387 15.36 15.1965 12.0021 15.1965 7.85999Z"
+                                        fill="currentColor" fill-opacity="0.1" />
+                                    <path
+                                        d="M10.9295 4.88618C11.1083 4.67577 11.4238 4.65019 11.6343 4.82904C11.8446 5.00788 11.8702 5.32343 11.6914 5.53383L7.44139 10.5338C7.25974 10.7475 6.93787 10.77 6.72825 10.5837L4.47825 8.5837C4.27186 8.40024 4.25327 8.0842 4.43673 7.87781C4.62019 7.67142 4.93622 7.65283 5.14261 7.83629L7.01053 9.49669L10.9295 4.88618Z"
+                                        fill="currentColor" />
+                                </svg>
+                                <span class="text-sm sm:text-base text-gray-500 dark:text-gray-300">
+                                    ใช้งานได้<span class="font-bold">ง่ายและรวดเร็ว</span>
+                                </span>
+                            </li>
+                            <li class="flex space-x-3">
+                                <svg class="flex-shrink-0 h-6 w-6 text-blue-600 dark:text-blue-500" width="16"
+                                    height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.1965 7.85999C15.1965 3.71785 11.8387 0.359985 7.69653 0.359985C3.5544 0.359985 0.196533 3.71785 0.196533 7.85999C0.196533 12.0021 3.5544 15.36 7.69653 15.36C11.8387 15.36 15.1965 12.0021 15.1965 7.85999Z"
+                                        fill="currentColor" fill-opacity="0.1" />
+                                    <path
+                                        d="M10.9295 4.88618C11.1083 4.67577 11.4238 4.65019 11.6343 4.82904C11.8446 5.00788 11.8702 5.32343 11.6914 5.53383L7.44139 10.5338C7.25974 10.7475 6.93787 10.77 6.72825 10.5837L4.47825 8.5837C4.27186 8.40024 4.25327 8.0842 4.43673 7.87781C4.62019 7.67142 4.93622 7.65283 5.14261 7.83629L7.01053 9.49669L10.9295 4.88618Z"
+                                        fill="currentColor" />
+                                </svg>
+                                <span class="text-sm sm:text-base text-gray-500 dark:text-gray-300">
+                                    พัฒนาได้<span class="font-bold">ง่าย</span>
+                                </span>
+                            </li>
+                            <li class="flex space-x-3">
+                                <svg class="flex-shrink-0 h-6 w-6 text-blue-600 dark:text-blue-500" width="16"
+                                    height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.1965 7.85999C15.1965 3.71785 11.8387 0.359985 7.69653 0.359985C3.5544 0.359985 0.196533 3.71785 0.196533 7.85999C0.196533 12.0021 3.5544 15.36 7.69653 15.36C11.8387 15.36 15.1965 12.0021 15.1965 7.85999Z"
+                                        fill="currentColor" fill-opacity="0.1" />
+                                    <path
+                                        d="M10.9295 4.88618C11.1083 4.67577 11.4238 4.65019 11.6343 4.82904C11.8446 5.00788 11.8702 5.32343 11.6914 5.53383L7.44139 10.5338C7.25974 10.7475 6.93787 10.77 6.72825 10.5837L4.47825 8.5837C4.27186 8.40024 4.25327 8.0842 4.43673 7.87781C4.62019 7.67142 4.93622 7.65283 5.14261 7.83629L7.01053 9.49669L10.9295 4.88618Z"
+                                        fill="currentColor" />
+                                </svg>
+                                <span class="text-sm sm:text-base text-gray-500 dark:text-gray-300">
+                                    เอกสารเนื้อหาแน่น
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Third One -->
+    <!-- Supported Browsers Section -->
+    <div class="max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-14 mx-auto text-gray-800 dark:text-white mb-12 moveUp">
+        <div class="max-w-3xl text-center mx-auto mb-6">
+            <h1 class="block font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+                เบราเซอร์ที่เรารองรับ
+            </h1>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Icon Block -->
+            <div
+                class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+                <!-- Icon -->
+                <div class="flex justify-center items-center w-12 h-12 rounded-md mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 48 48">
+                        <defs>
+                            <linearGradient id="a" x1="3.2173" y1="15" x2="44.7812" y2="15"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#d93025" />
+                                <stop offset="1" stop-color="#ea4335" />
+                            </linearGradient>
+                            <linearGradient id="b" x1="20.7219" y1="47.6791" x2="41.5039" y2="11.6837"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#fcc934" />
+                                <stop offset="1" stop-color="#fbbc04" />
+                            </linearGradient>
+                            <linearGradient id="c" x1="26.5981" y1="46.5015" x2="5.8161" y2="10.506"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#1e8e3e" />
+                                <stop offset="1" stop-color="#34a853" />
+                            </linearGradient>
+
+                            <path id="p"
+                                d="M13.6086 30.0031 3.218 12.006A23.994 23.994 0 0 0 24.0025 48l10.3906-17.9971-.0067-.0068a11.9852 11.9852 0 0 1-20.7778.007Z" />
+                        </defs>
+
+                        <use xlink:href="#p" fill="url(#a)" transform="rotate(120 24 24)" />
+                        <use xlink:href="#p" fill="url(#b)" transform="rotate(-120 24 24)" />
+                        <use xlink:href="#p" fill="url(#c)" />
+
+                        <circle cx="24" cy="24" r="12" style="fill:#fff" />
+                        <circle cx="24" cy="24" r="9.5" style="fill:#1a73e8" />
+                    </svg>
+                </div>
+                <!-- End Icon -->
+                <div class="mt-3">
+                    <h3 class="text-sm sm:text-base md:text-lg font-semibold">
+                        Google Chrome
+                    </h3>
+                </div>
+            </div>
+            <!-- End Icon Block -->
+            <!-- Icon Block -->
+            <div
+                class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+                <!-- Icon -->
+                <div class="flex justify-center items-center w-12 h-12 rounded-md mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="safari">
+                        <circle cx="8" cy="8" r="8" fill="#2196F3"></circle>
+                        <path fill="#FAFAFA" d="m7 7-4 6 6-4z"></path>
+                        <path fill="#F44336" d="m7 7 2 2 4-6z"></path>
+                    </svg>
+                </div>
+                <!-- End Icon -->
+
+                <div class="mt-3">
+                    <h3 class="text-sm sm:text-base md:text-lg font-semibold">
+                        Safari
+                    </h3>
+                </div>
+            </div>
+            <!-- End Icon Block -->
+            <!-- Icon Block -->
+            <div
+                class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+                <!-- Icon -->
+                <div class="flex justify-center items-center w-12 h-12 rounded-md mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2500" height="2500" preserveAspectRatio="xMidYMid"
+                        viewBox="0 0 256 256" id="opera">
+                        <defs>
+                            <linearGradient id="a" x1="50.003%" x2="50.003%" y1="1.63%" y2="98.545%">
+                                <stop offset="30%" stop-color="#FF1B2D"></stop>
+                                <stop offset="43.81%" stop-color="#FA1A2C"></stop>
+                                <stop offset="59.39%" stop-color="#ED1528"></stop>
+                                <stop offset="75.81%" stop-color="#D60E21"></stop>
+                                <stop offset="92.72%" stop-color="#B70519"></stop>
+                                <stop offset="100%" stop-color="#A70014"></stop>
+                            </linearGradient>
+                            <linearGradient id="b" x1="49.99%" x2="49.99%" y1=".853%" y2="99.519%">
+                                <stop offset="0%" stop-color="#9C0000"></stop>
+                                <stop offset="70%" stop-color="#FF4B4B"></stop>
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#a)"
+                            d="M85.9 200.1C71.7 183.4 62.6 158.7 62 131v-6c.6-27.7 9.8-52.4 23.9-69.1 18.4-23.8 45.4-34.5 75.9-34.5 18.8 0 36.5 1.3 51.5 11.3C190.8 12.4 161.1.1 128.5 0h-.5C57.3 0 0 57.3 0 128c0 68.6 54 124.7 121.9 127.9 2 .1 4.1.1 6.1.1 32.8 0 62.7-12.3 85.3-32.6-15 10-31.7 10.4-50.5 10.4-30.4.1-58.6-9.8-76.9-33.7z">
+                        </path>
+                        <path fill="url(#b)"
+                            d="M85.9 55.9c11.7-13.9 26.9-22.2 43.5-22.2 37.3 0 67.5 42.2 67.5 94.4s-30.2 94.4-67.5 94.4c-16.6 0-31.7-8.4-43.5-22.2 18.4 23.8 45.7 39 76.1 39 18.7 0 36.3-5.7 51.3-15.7C239.5 200 256 165.9 256 128c0-37.9-16.5-72-42.7-95.4-15-10-32.5-15.7-51.3-15.7-30.5 0-57.8 15.1-76.1 39z">
+                        </path>
+                    </svg>
+                </div>
+                <!-- End Icon -->
+                <div class="mt-3">
+                    <h3 class="text-sm sm:text-base md:text-lg font-semibold">
+                        Opera
+                    </h3>
+                </div>
+            </div>
+            <!-- End Icon Block -->
+            <!-- Icon Block -->
+            <div
+                class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+                <!-- Icon -->
+                <div class="flex justify-center items-center w-12 h-12 rounded-md mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="43.322" height="46.96" id="microsoft-edge">
+                        <path fill="#3277bc"
+                            d="M13.725 18.923h16.628c0-5.9-2.576-9.928-9.6-9.928-8.3 0-16.741 5.4-20.753 12.141C1.243 9.441 9.628 0 22.251 0c10.82 0 21.071 8.273 21.071 22.024v5.228H13.814c0 7.116 6.208 9.935 12.709 9.935a23.274 23.274 0 0 0 12.812-3.555V43.6a29.685 29.685 0 0 1-14.347 3.36c-11.457 0-19.544-8.211-19.544-18.421A18.1 18.1 0 0 1 17 11.486a12.118 12.118 0 0 0-3.28 7.437Z"
+                            data-name="microsoft edge"></path>
+                    </svg>
+                </div>
+                <!-- End Icon -->
+                <div class="mt-3">
+                    <h3 class="text-sm sm:text-base md:text-lg font-semibold">
+                        Edge
+                    </h3>
+                </div>
+            </div>
+            <!-- End Icon Block -->
+            <!-- Icon Block -->
+            <div
+                class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+                <!-- Icon -->
+                <div class="flex justify-center items-center w-12 h-12 rounded-md mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 256 256" viewBox="0 0 256 256"
+                        id="line-app">
+                        <path fill="#44C7B6" d="M179.865,16.977H76.135c-32.668,0-59.157,26.489-59.157,59.157v103.731
+						c0,32.668,26.489,59.157,59.157,59.157h103.731c32.668,0,59.157-26.489,59.157-59.157V76.135
+						C239.023,43.467,212.533,16.977,179.865,16.977z"></path>
+                        <path fill="#4BDBC3" d="M94.488,239.023H76.135c-32.668,0-59.157-26.489-59.157-59.157V76.135
+						c0-32.668,26.489-59.157,59.157-59.157h18.353c-32.668,0-59.157,26.489-59.157,59.157v103.731
+						C35.33,212.533,61.819,239.023,94.488,239.023z"></path>
+                        <path fill="#3BB2A0" d="M239.023,76.135v103.731c0,32.668-26.489,59.157-59.157,59.157h-18.353
+						c32.668,0,59.157-26.489,59.157-59.157V76.135c0-32.668-26.489-59.157-59.157-59.157h18.353
+						C212.533,16.977,239.023,43.467,239.023,76.135z"></path>
+                        <path fill="#FFE2E2" d="M214.135,121.651c0-38.346-38.564-69.431-86.135-69.431c-47.571,0-86.135,31.085-86.135,69.431
+			c0,35.21,32.516,64.293,74.662,68.815c3.358,0.36,5.461,3.806,4.251,6.96l-6.061,15.794c0,0,26.185-1.975,54.056-30.4
+			C195.777,171.099,214.135,148.105,214.135,121.651z"></path>
+                        <path fill="#5F266D" d="M179.862,12.981H76.138c-34.824,0-63.156,28.332-63.156,63.156v103.725
+			c0,34.824,28.332,63.156,63.156,63.156h103.725c34.824,0,63.156-28.332,63.156-63.156V76.138
+			C243.019,41.313,214.687,12.981,179.862,12.981z M235.019,179.862c0,30.413-24.743,55.156-55.156,55.156H76.138
+			c-30.413,0-55.156-24.743-55.156-55.156V76.138c0-30.413,24.743-55.156,55.156-55.156h103.725
+			c30.413,0,55.156,24.743,55.156,55.156V179.862z"></path>
+                        <path fill="#5F266D"
+                            d="M145.943 39h5.654c2.209 0 4-1.791 4-4s-1.791-4-4-4h-5.654c-2.209 0-4 1.791-4 4S143.734 39 145.943 39zM166.598 39h15c2.209 0 4-1.791 4-4s-1.791-4-4-4h-15c-2.209 0-4 1.791-4 4S164.389 39 166.598 39zM128 48.22c-49.7 0-90.135 32.941-90.135 73.432 0 36.713 33.634 68.007 78.235 72.792.749.08 1.211.849.943 1.55l-6.061 15.794c-1.057 2.754 1.135 5.646 4.035 5.421 1.123-.084 27.673-2.393 56.064-31.034 29.046-12.878 47.052-37.539 47.052-64.522C218.135 81.161 177.7 48.22 128 48.22zM167.181 179.15c-.473.205-.902.5-1.264.868-18.183 18.545-35.691 25.397-44.869 27.87l3.465-9.03c2.15-5.605-1.582-11.728-7.559-12.37-40.527-4.348-71.089-32.222-71.089-64.837 0-36.079 36.846-65.432 82.135-65.432s82.135 29.353 82.135 65.432C210.135 145.618 193.676 167.65 167.181 179.15z">
+                        </path>
+                        <path fill="#5F266D"
+                            d="M186.118 113.425c2.762 0 5-2.238 5-5s-2.238-5-5-5h-17.348c-2.762 0-5 2.238-5 5v26.963c0 2.762 2.238 5 5 5h17.348c2.762 0 5-2.238 5-5s-2.238-5-5-5h-12.348v-3.481h12.348c2.762 0 5-2.238 5-5s-2.238-5-5-5h-12.348v-3.481H186.118zM106.118 103.425c-2.762 0-5 2.238-5 5v26.963c0 2.762 2.238 5 5 5s5-2.238 5-5v-26.963C111.118 105.663 108.88 103.425 106.118 103.425zM84.4 130.387h-9.519v-21.963c0-2.762-2.238-5-5-5s-5 2.238-5 5v24.37c0 4.187 3.406 7.593 7.593 7.593H84.4c2.762 0 5-2.238 5-5S87.162 130.387 84.4 130.387zM148.368 103.425c-2.762 0-5 2.238-5 5v12.19l-11.643-15.228c-2.895-3.788-8.972-1.731-8.972 3.037v26.963c0 2.762 2.238 5 5 5s5-2.238 5-5v-12.19l11.643 15.228c1.292 1.69 3.526 2.39 5.575 1.699 2.03-.688 3.396-2.593 3.396-4.736v-26.963C153.368 105.663 151.13 103.425 148.368 103.425z">
+                        </path>
+                    </svg>
+                </div>
+                <!-- End Icon -->
+                <div class="mt-3">
+                    <h3 class="text-sm sm:text-base md:text-lg font-semibold">
+                        Line's In-App Browser
+                    </h3>
+                </div>
+            </div>
+            <!-- End Icon Block -->
+            <!-- Icon Block -->
+            <div
+                class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+                <!-- Icon -->
+                <div class="flex justify-center items-center w-12 h-12 rounded-md mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" id="browser">
+                        <g fill="#fff" transform="translate(7.995 -1011.561)">
+                            <circle cx="16.005" cy="1035.561" r="24" fill="#239fdb" fill-rule="evenodd"></circle>
+                            <path fill="#0b5ecd"
+                                style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;block-progression:tb"
+                                d="M30.205 47.174a24 24 0 0 0 .215-.049 24 24 0 0 0 2.277-.756 24 24 0 0 0 2.19-.98 24 24 0 0 0 2.08-1.194 24 24 0 0 0 1.951-1.394 24 24 0 0 0 1.803-1.584 24 24 0 0 0 1.634-1.756 24 24 0 0 0 1.454-1.91 24 24 0 0 0 1.254-2.045 24 24 0 0 0 1.042-2.16 24 24 0 0 0 .823-2.254 24 24 0 0 0 .228-.895l-15.68-15.68-.025-.025c-.033-.033-.07-.061-.103-.094a12.04 12.04 0 0 0-.56-.515c-.08-.067-.161-.129-.241-.194a11.994 11.994 0 0 0-.445-.347c-.104-.077-.21-.15-.317-.223a11.998 11.998 0 0 0-1.574-.916 11.98 11.98 0 0 0-.482-.219c-.116-.05-.231-.1-.348-.146a11.95 11.95 0 0 0-.598-.215c-.08-.027-.159-.057-.24-.082-.293-.09-.59-.172-.89-.24.117.122.234.248.345.385.46.565.876 1.26 1.242 2.066.127.28.239.59.354.896l-2.76-2.761c-.022-.022-.044-.038-.066-.059-.05-.048-.1-.09-.149-.133a3.625 3.625 0 0 0-.492-.363 2.518 2.518 0 0 0-.293-.146c-.057-.025-.114-.053-.172-.073a2.036 2.036 0 0 0-.385-.088c-.025-.003-.049-.015-.074-.017-.08 0-.16-.01-.242-.01V11c-.213.01-.426.042-.643.12-.376.132-.756.385-1.127.745-.05.05-.1.11-.15.162l-.717-.716a11.986 11.986 0 0 0-6.435 3.886l1.761 1.762c-.131-.041-.27-.078-.398-.121a14.492 14.492 0 0 1-1.996-.84 11.97 11.97 0 0 0-2.069 4.867A12.012 12.012 0 0 0 11 22.996l1 1h-.957c.104 1.245.4 2.455.871 3.59v.002c.353.85.803 1.659 1.342 2.408v.002c.18.25.37.493.568.729l.76.76c-.015.006-.034.01-.049.017l15.67 15.67z"
+                                color="#000" font-family="sans-serif" font-weight="400"
+                                transform="translate(-7.995 1011.561)"></path>
+                            <path
+                                style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;block-progression:tb"
+                                d="M13.967 1023.365c.081 0 .161.01.242.01.685.064 1.352.49 2.02 1.31.781.96 1.476 2.465 1.98 4.348a26.556 26.556 0 0 1-8.412-.004c.206-.772.436-1.505.707-2.145.783-1.846 1.817-3.044 2.82-3.398.217-.077.43-.112.643-.12zm2.691.3a12 12 0 0 1 6.453 3.897c-1.09.538-2.424.975-3.918 1.283-.527-2.015-1.268-3.663-2.19-4.795a6.024 6.024 0 0 0-.345-.385zm-5.328.01c-.679.713-1.263 1.673-1.748 2.817-.302.71-.552 1.515-.773 2.359-1.493-.307-2.822-.75-3.914-1.29a11.974 11.974 0 0 1 6.435-3.886zm12.412 4.688c.347.482.656.997.932 1.535a7.51 7.51 0 0 0-3.104-.596c-.06 0-.122.013-.183.016.86-.27 1.649-.588 2.355-.955zm-19.48 0c1.215.629 2.675 1.124 4.297 1.46a26.085 26.085 0 0 0-.518 4.042c-.026.503-.024.999-.025 1.496h-6.01c0-.706.059-1.418.187-2.131a11.97 11.97 0 0 1 2.069-4.867zm5.285 1.636c1.47.242 3.035.37 4.639.36a27.777 27.777 0 0 0 4.263-.35c.005.024.013.046.018.07-.15.073-.301.139-.447.223a7.478 7.478 0 0 0-3.602 5.059H9.02c-.002-.48-.006-.959.02-1.444.072-1.394.249-2.713.507-3.918zm12.049.3a6.495 6.495 0 0 1 5.802 3.25 6.493 6.493 0 0 1-2.378 8.878 6.493 6.493 0 0 1-8.88-2.379 6.495 6.495 0 0 1 2.38-8.88 6.467 6.467 0 0 1 3.076-.87zm.277 1.497c-.242-.01-.485.01-.727.037a5.007 5.007 0 0 0-1.876.657c-2.384 1.376-3.218 4.423-1.84 6.808 1.378 2.387 4.452 3.217 6.84 1.838 2.386-1.378 3.218-4.45 1.84-6.838a5.02 5.02 0 0 0-4.237-2.502zm-.023 1a4.02 4.02 0 0 1 3.392 2.002c.106.183.18.372.254.563h-7.441a3.978 3.978 0 0 1 1.715-2.006c.49-.283.999-.467 1.5-.53.193-.023.386-.033.58-.028zm-19.801 3.565h5.976c.062 1.957.308 3.833.739 5.496-1.45.288-2.777.707-3.934 1.234a12.002 12.002 0 0 1-2.781-6.73zm6.988 0h5.25a7.454 7.454 0 0 0 .986 4.187c.183.316.39.606.61.885a28.089 28.089 0 0 0-6.08.244c-.424-1.589-.69-3.408-.766-5.316zm8.76 0h7.953a4.01 4.01 0 0 1-1.98 3.91 4.007 4.007 0 0 1-5.473-1.473 3.945 3.945 0 0 1-.5-2.437zm-4.17 6.004c1.098-.016 2.21.038 3.307.156.264.223.542.429.832.611-.726 1.993-1.682 3.32-2.61 3.881a2.459 2.459 0 0 1-.89.338c-.197 0-.393.01-.59 0-.46-.078-.927-.333-1.422-.795-.852-.795-1.588-2.187-2.15-3.908a26.888 26.888 0 0 1 3.523-.285zm-4.565.465c.56 1.752 1.322 3.226 2.284 4.224a11.994 11.994 0 0 1-2.533-.873 11.981 11.981 0 0 1-3.272-2.312c1.032-.436 2.221-.788 3.521-1.04zm17.016.1 3.856 6.68a.489.489 0 0 1-.182.683.489.489 0 0 1-.684-.184l-3.847-6.664c.1-.052.2-.096.299-.152.194-.112.378-.237.558-.363zm-7.428.68a7.55 7.55 0 0 0 3.354.68 11.97 11.97 0 0 1-5.334 2.763c.776-.81 1.436-1.985 1.98-3.444z"
+                                color="#000" font-family="sans-serif" font-weight="400" overflow="visible"
+                                transform="translate(.999 -.803)"></path>
+                        </g>
+                    </svg>
+                </div>
+                <!-- End Icon -->
+                <div class="mt-3">
+                    <h3 class="text-sm sm:text-base md:text-lg font-semibold">
+                        เว็บเบราเซอร์อื่น ๆ ก็รองรับนะ
+                    </h3>
+                </div>
+            </div>
+            <!-- End Icon Block -->
+        </div>
+        <!-- End Grid -->
+    </div>
+
+    <!-- The Forth One -->
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto mt-12 moveUp text-gray-800 dark:text-white"
+        id="getStart">
+        <div class="max-w-3xl text-center mx-auto mb-6">
+            <h1 class="block font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+                เริ่มต้นใช้งาน
+            </h1>
+        </div>
+        <!-- Grid -->
+        <div class="grid lg:grid-cols-2 gap-6">
+            <!-- Card -->
+            <a class="group sm:flex" href="src/pages/mindartest.html">
+                <div
+                    class="flex-shrink-0 relative rounded-xl overflow-hidden w-full h-[200px] sm:w-[250px] sm:h-[350px]">
+                    <img class="w-full h-full absolute top-0 left-0 object-cover"
+                        src="/assets/Images/forScanner.jpg"
+                        alt="Image Description">
+                </div>
+
+                <div class="grow">
+                    <div class="p-4 flex flex-col h-full sm:p-6">
+                        <div class="mb-3">
+                            <p
+                                class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-md text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200">
+                                สแกนเนอร์
+                            </p>
+                        </div>
+                        <h3
+                            class="text-lg sm:text-2xl font-semibold text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+                            ใช้เพื่อสแกนรูปเพื่อดูโมเดล
+                        </h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400">
+                            ลองเข้าใช้งานดูสิ
+                        </p>
+
+                        <div class="mt-5 sm:mt-auto">
+                            <!-- Avatar -->
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <img class="h-[2.875rem] w-[2.875rem] rounded-full" src="assets/Images/realTay.jpg"
+                                        alt="Image Description">
+                                </div>
+                                <div class="ml-2.5 sm:ml-4">
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200">
+                                        กรกช
+                                    </h4>
+                                    <p class="text-xs text-gray-500">
+                                        ผู้พัฒนา
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- End Avatar -->
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- End Card -->
+
+            <!-- Card -->
+            <a class="group sm:flex" href="src/pages/infoCentre/mainInfo.html">
+                <div
+                    class="flex-shrink-0 relative rounded-xl overflow-hidden w-full h-[200px] sm:w-[250px] sm:h-[350px]">
+                    <img class="w-full h-full absolute top-0 left-0 object-cover"
+                        src="/assets/Images/forInfoCentre.jpg"
+                        alt="Image Description">
+                </div>
+                <div class="grow">
+                    <div class="p-4 flex flex-col h-full sm:p-6">
+                        <div class="mb-3">
+                            <p
+                                class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-md text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200">
+                                InfoCentre
+                            </p>
+                        </div>
+                        <h3
+                            class="text-lg sm:text-2xl font-semibold text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+                            เข้าอ่านและศึกษาข้อมูลของอาคารต่าง ๆ ได้ที่นี่
+                        </h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400">
+                            สร้างใหม่สวยกว่าเดิม
+                        </p>
+
+                        <div class="mt-5 sm:mt-auto">
+                            <!-- Avatar -->
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <img class="h-[2.875rem] w-[2.875rem] rounded-full" src="assets/Images/realTay.jpg"
+                                        alt="Image Description">
+                                </div>
+                                <div class="ml-2.5 sm:ml-4">
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200">
+                                        กรกช
+                                    </h4>
+                                    <p class="text-xs text-gray-500">
+                                        ผู้พัฒนา
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- End Avatar -->
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- End Card -->
+        </div>
+        <!-- End Grid -->
+    </div>
+</body>
+
+</html>

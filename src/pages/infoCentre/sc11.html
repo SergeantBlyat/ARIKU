@@ -1,0 +1,284 @@
+<html>
+
+<head>
+  <title>SC11: InfoCentre</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <script src="/src/components/main.js"></script>
+  <script src="/src/components/prelineThings.min.js"></script>
+  <script src="/src/components/carousel.js"></script>
+  <link rel="stylesheet" href="/src/components/output.css">
+  <script src="https://blyatifulworld.github.io/node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="https://blyatifulworld.github.io/node_modules/preline/dist/preline.js"></script>
+</head>
+
+<body class="bg-white dark:bg-slate-900 font-varela">
+  <!--Carousel-->
+  <div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <div class="relative h-64 overflow-hidden md:h-2/3">
+      <div id="carouselBody"></div> <!-- The actual body of the damned carousel -->
+      <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+          data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+          data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+          data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+          data-carousel-slide-to="3"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+          data-carousel-slide-to="4"></button>
+      </div>
+      <button type="button"
+        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev>
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 1 1 5l4 4" />
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+      <button type="button"
+        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next>
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 9 4-4-4-4" />
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <!--End of carousel -->
+  <!-- Header -->
+  <header
+    class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-base py-4 dark:bg-slate-800 sticky top-0">
+    <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
+      <div class="flex items-center justify-between">
+        <a class="inline-flex items-center gap-x-2 text-xl font-semibold dark:text-white" href="/index.html">
+          <div class="bg-white rounded-md">
+            <img class="w-12 h-auto" src="/assets/Images/ARIKULogo.png" alt="Logo">
+          </div>
+          ARIKU
+        </a>
+        <div class="sm:hidden">
+          <button type="button"
+            class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+            data-hs-collapse="#navbar-image-and-text-2" aria-controls="navbar-image-and-text-2"
+            aria-label="Toggle navigation">
+            <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <svg class="hs-collapse-open:block hidden w-4 h-4" width="16" height="16" fill="currentColor"
+              viewBox="0 0 16 16">
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="navbar-image-and-text-2"
+        class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
+        <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
+          <a class="font-medium text-gray-800 hover:text-gray-500 dark:text-white dark:hover:text-gray-400"
+            href="/index.html">Home</a>
+          <div class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none]">
+            <button id="hs-mega-menu-basic-dr" type="button"
+              class="flex items-center w-full text-gray-800 hover:text-gray-500 dark:text-white dark:hover:text-gray-400">
+              Get Started
+              <svg class="ml-2 w-2.5 h-2.5 text-gray-800 dark:text-white" width="16" height="16" viewBox="0 0 16 16"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </button>
+            <div
+              class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:left-0 before:w-full before:h-5 hidden"
+              style="">
+              <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400"
+                href="../mindartest.html">
+                Scanner
+              </a>
+              <div class="hs-dropdown relative [--strategy:static] sm:[--strategy:absolute] [--adaptive:none]">
+                <button type="button"
+                  class="w-full flex justify-between w-full items-center text-sm text-gray-800 rounded-md py-2 px-3 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400">
+                  InfoCentre
+                  <svg class="sm:-rotate-90 ml-2 w-2.5 h-2.5 text-gray-800 dark:text-white" width="16" height="16"
+                    viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute sm:border before:-right-5 before:top-0 before:h-full before:w-5 top-0 right-full !mx-[10px]">
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400"
+                    href="sc1.html">
+                    SC1
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400"
+                    href="sc2.html">
+                    SC2
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400"
+                    href="sc3.html">
+                    SC3
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400"
+                    href="sc4.html">
+                    SC4
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400"
+                    href="sc5.html">
+                    SC5
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400"
+                    href="sc9.html">
+                    SC9
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400"
+                    href="sc11.html">
+                    SC11
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400"
+                    href="sc14.html">
+                    SC14
+                  </a>
+                  <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-400"
+                    href="llb.html">
+                    LLB
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="hs-dark-mode-active:hidden block hs-dark-mode group flex items-center text-gray-800 hover:text-blue-600 font-medium dark:text-white dark:hover:text-gray-400"
+            href="#!" data-hs-theme-click-value="dark">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+            </svg>
+          </a>
+          <a class="hs-dark-mode-active:block hidden hs-dark-mode group flex items-center text-gray-800 hover:text-blue-600 font-medium dark:text-white dark:hover:text-gray-400"
+            href="#!" data-hs-theme-click-value="light">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              viewBox="0 0 16 16">
+              <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End of Header -->
+
+  <div class="font-medium text-gray-800 dark:text-white bg-gradient-to-b from-green-900/[.20] via-transparent">
+
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8 mb-6">
+      <div class="max-w-3xl text-center mx-auto">
+        <h1 class="block font-medium text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+          SC-11
+        </h1>
+      </div>
+      <div class="max-w-3xl text-center mx-auto">
+        <p class="text-3xl">อาคารสาขาเทคโนโลยีสารสนเทศ</p>
+      </div>
+      <div class="pt-6 mt-6 moveUp container mx-auto">
+        <div class="max-w-3xl text-center mx-auto md:mb-6">
+          <h1 class="block font-medium text-xl md:text-3xl lg:text-4xl">
+            แล้วตึกนี้อยู่ไหนล่ะ
+          </h1>
+        </div>
+        <div class="flex justify-center items-center mx-auto">
+          <img src="/assets/Images/Twine/Map/SC11Map.png" class="rounded-3xl md:w-3/5 w-4/5 aspect-square">
+        </div>
+      </div>
+    </div>
+    <div class="max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-14 mx-auto text-gray-800 dark:text-white mb-12 moveUp">
+      <div class="max-w-3xl text-center mx-auto mb-2">
+        <h1 class="block font-medium text-xl md:text-3xl lg:text-4xl">
+          เห?? <span class="dark:text-green-600 text-green-900">รูปนี้สแกนได้น้าาา</span>
+        </h1>
+      </div>
+      <figure>
+        <div class="flex justify-center items-center">
+          <img class="md:w-3/5 w-4/5 rounded-xl" src="/assets/Images/Twine/RENDER/SC-11/sc11-iso.png"
+            alt="Image Description">
+        </div>
+        <figcaption class="mt-3 text-sm text-center text-gray-500">
+          โมเดลจำลองตึก SC-11 เพื่อการสแกน
+        </figcaption>
+      </figure>
+      <div class="max-w-3xl text-center mx-auto my-12">
+        <h3 class="block font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-12">
+          ในตึกนี้มีห้องที่ควรทราบ ดังนี้
+        </h3>
+        <div class="justify-center items-center mt-9 moveToLeft">
+          <div class="align-middle">
+            <div class="flex flex-col">
+              <div class="-m-1.5 overflow-x-auto">
+                <div class="p-1.5 min-w-full inline-block align-middle">
+                  <div class="border rounded-lg shadow overflow-hidden dark:border-gray-700 dark:shadow-gray-900">
+                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                      <thead class="bg-gray-50 dark:bg-gray-700">
+                        <tr>
+                          <th scope="col"
+                            class="px-6 py-3 text-left text-lg font-medium text-gray-600 uppercase dark:text-gray-400">
+                            ชั้นที่</th>
+                          <th scope="col"
+                            class="px-6 py-3 text-left text-lg font-medium text-gray-600 uppercase dark:text-gray-400">
+                            ประกอบด้วย</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tableBody">
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-14 mx-auto text-gray-800 dark:text-white mb-12 moveUp object-contain">
+      <div class="max-w-3xl text-center mx-auto mb-2">
+        <h1 class="block font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+          ใช้เม้าส์ (หรือนิ้ว) หมุน ๆ ซูม ๆ วู้ม~~~~ ได้นะ
+        </h1>
+      </div>
+      <div class="flex justify-center items-center">
+        <figure>
+          <div class="mb-6">
+            <model-viewer src="/assets/Models/MODEL/Science/SC11/SC11_ver2.gltf" ar-scale="auto" shadow-intensity="1"
+              camera-controls touch-action="pan-y"></model-viewer>
+          </div>
+          <figcaption class="mt-3 text-sm text-center text-gray-500">
+            โมเดลจำลองตึก SC-11 สำหรับผู้ที่ไม่ต้องการสแกน
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <script>
+    createTable(tableSC11, 'tableBody')
+    createCarousel(carouselSC11, 'carouselBody');
+  </script>
+</body>
+
+</html>

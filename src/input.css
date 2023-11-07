@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Varela';
+    font-weight: bolder;
+    src: url(/assets/fonts/Kanit-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.moveUp {
+    position: relative;
+    opacity: 0;
+}
+
+.moveUp.animate {
+    animation: moveUp 1s ease-in forwards;
+    opacity: 1;
+}
+
+@keyframes moveUp {
+    0% {
+        top: 150px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.moveToLeft {
+    position: relative;
+    opacity: 0;
+}
+
+.moveToLeft.animate {
+    animation: moveToLeft 1.5s ease-in forwards;
+    opacity: 1;
+}
+
+@keyframes moveToLeft {
+    0% {
+        left: 150px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+model-viewer {
+    width: 100vw;
+    height: 320px;
+}
+
+@media (min-width: 1024px) {
+    model-viewer {
+        width: 1024px;
+        height: 768px;
+    }
+}
